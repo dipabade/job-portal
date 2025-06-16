@@ -1,0 +1,19 @@
+@use './variables' as *;
+@use './mixins' as *;
+@import "../pages/auth/auth.scss";
+@import '../components/admin/jobs.scss';
+@import '../components/user-job/user-job.scss';
+
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: $bg-color; 
+}
+
+
+p {
+  color:$text-color;
+}
+
+a {
+    text-decoration: none;
+}
