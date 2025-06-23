@@ -1,0 +1,114 @@
+.grid {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $white;
+  color: $text-color;
+  font-family: Arial, sans-serif;
+
+  th, td {
+    padding: 0.75rem;
+    border: 1px solid $border-color;
+  }
+
+  thead {
+    background-color: $primary-color-light;
+    
+    th {
+      color: $white;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .col-filter {
+      width: 100%;
+      margin-top: 0.25rem;
+      padding: 0.25rem;
+      border: 1px solid $border-color, 10%;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: $color-light-bg;
+      }
+
+      &:hover {
+        background-color: $primary-color-light;
+      }
+    }
+
+    td {
+      & > input,
+      & > textarea {
+        width: 100%;
+        padding: 0.4rem;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        font-size: 0.95rem;
+        color: $text-color;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      button {
+        margin: 0 0.2rem 0.2rem 0;
+        padding: 0.4rem 0.8rem;
+        border: none;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        background-color: $primary-color;
+        color: $white;
+        &:hover {
+          background-color: $primary-color-dark;
+        }
+        &:nth-child(2) {
+          background-color: $color-accent;
+          &:hover { background-color: $color-accent; }
+        }
+      }
+    }
+  }
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  .grid {
+    background-color: $border-color;
+    color: $white;
+
+    thead {
+      background-color: $primary-color-dark;
+      th {
+        color: $white;
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background-color: $bg-color
+        }
+        &:hover {
+          background-color: $primary-color-dark;
+        }
+      }
+      td {
+        border-color: $border-color;
+        & > input,
+        & > textarea {
+          background-color: $white;
+          border-color: $border-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}

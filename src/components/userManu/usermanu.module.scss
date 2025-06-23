@@ -1,0 +1,35 @@
+.menu {
+  position: relative;
+
+  .avatarBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  .dropdown {
+    position: absolute;
+    right: 0;
+    margin-top: 0.5rem;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #333;
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+    li button {
+      background: none;
+      border: none;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+:root {
+  --bg: #fff;
+  --fg: #000;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --fg: #eee;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 4rem;
+  right: 1rem;
+  z-index: 999;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--fg);
+  transition: transform 0.2s ease, color 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    color: #ffb300;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
